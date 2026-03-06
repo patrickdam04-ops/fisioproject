@@ -1215,7 +1215,7 @@ ul {
     gap: 10px;
     width: 100%;
     padding: 14px;
-    background: var(--color-whatsapp);
+    background: var(--color-primary);
     color: white;
     font-family: var(--font-body);
     font-size: 1rem;
@@ -1225,7 +1225,7 @@ ul {
 }
 
 .sticky-whatsapp__btn:hover {
-    background: var(--color-whatsapp-dark);
+    background: var(--color-primary-dark);
 }
 
 .sticky-whatsapp__btn svg {
