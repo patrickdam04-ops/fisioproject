@@ -1406,7 +1406,12 @@ ul {
 
     .navbar__menu .navbar__link {
         font-size: 1.3rem;
-        color: white;
+        color: white !important;
+    }
+
+    .navbar.menu-open .navbar__logo-img {
+        filter: brightness(0) invert(1) !important;
+        mix-blend-mode: normal !important;
     }
 
     .navbar__hamburger {
