@@ -127,7 +127,8 @@ ul {
 }
 
 .navbar__logo {
-    z-index: 1001;
+    position: relative;
+    z-index: 1002;
     display: flex;
     align-items: center;
 }
@@ -214,6 +215,8 @@ ul {
 }
 
 .navbar__hamburger {
+    position: relative;
+    z-index: 1002;
     display: none;
     flex-direction: column;
     gap: 5px;
@@ -221,7 +224,6 @@ ul {
     border: none;
     cursor: pointer;
     padding: 4px;
-    z-index: 1001;
 }
 
 .navbar__hamburger span {
@@ -234,6 +236,10 @@ ul {
 
 .navbar.scrolled .navbar__hamburger span {
     background: var(--color-primary);
+}
+
+.navbar.scrolled .navbar__hamburger.active span {
+    background: white;
 }
 
 .navbar__hamburger.active span:nth-child(1) {
@@ -1435,29 +1441,6 @@ ul {
 
     .section__title {
         font-size: 1.6rem;
-    }
-
-    /* Horizontal scroll for Explore cards */
-    #esplora .method__grid {
-        flex-wrap: nowrap !important;
-        overflow-x: auto;
-        padding-bottom: 24px;
-        scroll-snap-type: x mandatory;
-        justify-content: flex-start;
-        -webkit-overflow-scrolling: touch;
-        /* Hide scrollbar */
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    #esplora .method__grid::-webkit-scrollbar {
-        display: none;
-    }
-
-    #esplora .method__card {
-        scroll-snap-align: center;
-        flex: 0 0 85%;
-        max-width: 85%;
     }
 
     /* Add bottom padding on mobile for sticky WhatsApp bar */
