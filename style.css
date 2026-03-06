@@ -29,7 +29,7 @@
     --font-heading: 'Outfit', 'Inter', sans-serif;
 
     /* Spacing */
-    --section-padding: 100px 0;
+    --section-padding: 120px 0;
     --container-max: 1200px;
     --gap: 24px;
 
@@ -68,7 +68,7 @@ html {
 body {
     font-family: var(--font-body);
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--color-text);
     background: var(--color-bg);
     -webkit-font-smoothing: antialiased;
