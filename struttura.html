@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trattamenti | Fisioproject</title>
+    <title>La Struttura | Fisioproject</title>
     <meta name="description"
         content="Studio fisioterapico a Prato. Il Dott. Valentino Alessi risolve il dolore alla radice con un metodo in 3 step: valutazione, trattamento e esercizio. 200+ recensioni a 5 stelle.">
     <meta name="keywords"
@@ -57,6 +57,9 @@
 
 <body>
 
+    <!-- ═══════════════════════════════════ NAVBAR
+
+    <!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
     <!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
     <nav class="navbar" id="navbar">
         <div class="container navbar__inner">
@@ -69,8 +72,7 @@
                 <li><a href="#chi-sono" class="navbar__link">Chi Sono</a></li>
                 <li><a href="#metodo" class="navbar__link">Il Metodo</a></li>
                 <li><a href="#recensioni" class="navbar__link">Recensioni</a></li>
-                <li><a href="#" class="navbar__link">Trattamenti</a></li>
-                <li><a href="struttura.html" class="navbar__link">La Struttura</a></li>
+                <li><a href="trattamenti.html" class="navbar__link">Trattamenti</a></li>
                 <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
                 <li>
                     <a href="https://wa.me/393398492657?text=Ciao%2C%20vorrei%20prenotare%20una%20valutazione."
@@ -85,104 +87,41 @@
         </div>
     </nav>
 
-    <!-- ═══════════════════════════════════ TRATTAMENTI ═══════════════════════════════════ -->
-    <section class="section section--gradient" style="padding-top: 180px; min-height: 80vh;" id="trattamenti">
+        <!-- ═══════════════════════════════════ STRUTTURA ═══════════════════════════════════ -->
+    <section class="section section--gradient" style="padding-top: 180px; min-height: 80vh;" id="struttura">
         <div class="container">
             <div class="section__header animate-on-scroll">
-                <span class="section__tag section__tag--light">Cosa facciamo</span>
-                <h2 class="section__title section__title--light">Trattamenti e Servizi</h2>
-                <p class="section__subtitle section__subtitle--light">Ogni percorso è personalizzato. Ecco gli strumenti
-                    che abbiamo a disposizione per risolvere il tuo problema.</p>
+                <span class="section__tag section__tag--light">La clinica</span>
+                <h2 class="section__title section__title--light">La Nostra Struttura</h2>
+                <p class="section__subtitle section__subtitle--light">Un ambiente accogliente, moderno e dotato delle migliori tecnologie per il tuo recupero.</p>
             </div>
-
-            <div class="treatments__grid">
-                <div class="treatment__card animate-on-scroll">
-                    <div class="treatment__icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M8 24c0-8.837 7.163-16 16-16s16 7.163 16 16" />
-                            <circle cx="24" cy="24" r="6" />
-                            <path d="M24 30v12" />
-                            <path d="M18 38h12" />
-                        </svg>
+            
+            <div class="treatments__grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 40px;">
+                <!-- Placeholder card 1 -->
+                <div class="treatment__card animate-on-scroll" style="text-align: center; padding: 40px;">
+                    <div class="treatment__icon" style="margin-bottom: 20px;">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="8" width="40" height="32" rx="4"/><circle cx="24" cy="24" r="8"/></svg>
                     </div>
-                    <h3 class="treatment__title">Terapia Strumentale</h3>
-                    <ul class="treatment__list">
-                        <li>
-                            <strong>Tecarterapia originale Humantecar</strong>
-                            <p>Stimolazione profonda dei tessuti per accelerare la guarigione naturale. Gold standard
-                                della fisioterapia strumentale.</p>
-                        </li>
-                        <li>
-                            <strong>Limfa Therapy</strong>
-                            <p>Tecnologia a campi magnetici per ridurre infiammazione e dolore in modo non invasivo.</p>
-                        </li>
-                    </ul>
+                    <h3 class="treatment__title">Sala d'Attesa</h3>
+                    <p style="color: var(--color-text-light-muted);">Le foto verranno inserite molto presto in questo spazio.</p>
                 </div>
-
-                <div class="treatment__card animate-on-scroll">
-                    <div class="treatment__icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M16 12c-2-4-8-4-8 2s10 14 16 20c6-6 16-14 16-20s-6-6-8-2" />
-                            <path d="M20 28l4 4 8-12" />
-                        </svg>
+                
+                <!-- Placeholder card 2 -->
+                <div class="treatment__card animate-on-scroll" style="text-align: center; padding: 40px;">
+                    <div class="treatment__icon" style="margin-bottom: 20px;">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="8" width="40" height="32" rx="4"/><circle cx="24" cy="24" r="8"/></svg>
                     </div>
-                    <h3 class="treatment__title">Terapia Manuale</h3>
-                    <ul class="treatment__list">
-                        <li>
-                            <strong>Manipolazione Miofasciale</strong>
-                            <p>Tecniche manuali specifiche per rilasciare le tensioni fasciali e ripristinare la
-                                mobilità articolare.</p>
-                        </li>
-                        <li>
-                            <strong>Terapia Manuale — Metodo Mulligan</strong>
-                            <p>Mobilizzazioni articolari con movimento attivo per risultati immediati e duraturi.</p>
-                        </li>
-                    </ul>
+                    <h3 class="treatment__title">Sala Trattamenti Manuali</h3>
+                    <p style="color: var(--color-text-light-muted);">Le foto verranno inserite molto presto in questo spazio.</p>
                 </div>
-
-                <div class="treatment__card animate-on-scroll">
-                    <div class="treatment__icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M12 36V24l12-12 12 12v12" />
-                            <rect x="20" y="28" width="8" height="8" />
-                            <path d="M6 24l18-18 18 18" />
-                        </svg>
+                
+                <!-- Placeholder card 3 -->
+                <div class="treatment__card animate-on-scroll" style="text-align: center; padding: 40px;">
+                    <div class="treatment__icon" style="margin-bottom: 20px;">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="8" width="40" height="32" rx="4"/><circle cx="24" cy="24" r="8"/></svg>
                     </div>
-                    <h3 class="treatment__title">Riabilitazione</h3>
-                    <ul class="treatment__list">
-                        <li>
-                            <strong>Riabilitazione Post-Chirurgica</strong>
-                            <p>Percorsi personalizzati dopo interventi ortopedici per tornare alla piena funzionalità
-                                nel minor tempo possibile.</p>
-                        </li>
-                        <li>
-                            <strong>Riabilitazione Sportiva</strong>
-                            <p>Return-to-sport con protocolli specifici per il tuo livello e il tuo sport.</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="treatment__card animate-on-scroll">
-                    <div class="treatment__icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M24 6v36" />
-                            <path d="M14 16l10-10 10 10" />
-                            <path d="M12 32c4-4 8 0 12-4s8 0 12-4" />
-                        </svg>
-                    </div>
-                    <h3 class="treatment__title">Ginnastica e Postura</h3>
-                    <ul class="treatment__list">
-                        <li>
-                            <strong>Ginnastica Posturale</strong>
-                            <p>Esercizi mirati per correggere le posture sbagliate e prevenire la ricomparsa del dolore.
-                            </p>
-                        </li>
-                        <li>
-                            <strong>Metodo Meziérès</strong>
-                            <p>Rieducazione posturale globale per riequilibrare le catene muscolari e ritrovare
-                                l'armonia del corpo.</p>
-                        </li>
-                    </ul>
+                    <h3 class="treatment__title">Sala Esercizi Terapeutici</h3>
+                    <p style="color: var(--color-text-light-muted);">Le foto verranno inserite molto presto in questo spazio.</p>
                 </div>
             </div>
         </div>
@@ -202,7 +141,7 @@
                         <li><a href="#problema">Il Problema</a></li>
                         <li><a href="#metodo">Il Metodo</a></li>
                         <li><a href="trattamenti.html">Trattamenti</a></li>
-                        <li><a href="struttura.html">La Struttura</a></li>
+                        <li><a href="#">La Struttura</a></li>
                         <li><a href="#chi-sono">Chi Sono</a></li>
                         <li><a href="contatti.html">Contatti</a></li>
                     </ul>

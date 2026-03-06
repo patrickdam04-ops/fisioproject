@@ -103,11 +103,13 @@ ul {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
     z-index: 1000;
     padding: 16px 0;
-    transition: var(--transition);
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: transparent;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
 }
 
 .navbar.scrolled {
