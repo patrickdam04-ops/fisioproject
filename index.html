@@ -116,21 +116,6 @@
                     Scopri il Metodo
                 </a>
             </div>
-            <div class="hero__stats animate-on-scroll">
-                <div class="hero__stat">
-                    <span class="hero__stat-number" data-target="200" data-suffix="+">0</span>
-                    <span class="hero__stat-label">Recensioni Google</span>
-                </div>
-                <div class="hero__stat">
-                    <span class="hero__stat-number" data-target="5.0" data-decimal="true" data-suffix=" ★">0.0 ★</span>
-                    <span class="hero__stat-label">Rating Medio</span>
-                </div>
-                <div class="hero__stat">
-                    <span class="hero__stat-number" data-target="10">0</span>
-                    <span class="hero__stat-label">Anni di Esperienza</span>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- ═══════════════════════════════════ PROBLEMA ═══════════════════════════════════ -->
@@ -371,10 +356,29 @@
                 <p class="section__subtitle">5.0 stelle su Google. Leggi cosa dicono di noi.</p>
             </div>
 
-            <div class="reviews__highlight animate-on-scroll">
-                <div class="reviews__stars">★★★★★</div>
-                <div class="reviews__rating">5.0</div>
-                <span class="reviews__count">su 200+ recensioni Google</span>
+            <div class="reviews__highlight animate-on-scroll"
+                style="display: flex; gap: 48px; justify-content: space-evenly; align-items: center; padding: 40px; flex-wrap: wrap;">
+                <div class="reviews__stat" style="text-align: center;">
+                    <span class="reviews__stat-number" data-target="200" data-suffix="+"
+                        style="display: block; font-family: var(--font-heading); font-size: 3.5rem; font-weight: 800; color: var(--color-primary); line-height: 1;">0</span>
+                    <span class="reviews__stat-label"
+                        style="font-size: 1.1rem; color: var(--color-text-muted); margin-top: 8px; display: block; font-weight: 600;">Recensioni</span>
+                </div>
+                <div class="reviews__stat" style="text-align: center;">
+                    <span class="reviews__stat-number" data-target="5.0" data-decimal="true" data-suffix=" ★"
+                        style="display: block; font-family: var(--font-heading); font-size: 3.5rem; font-weight: 800; color: var(--color-primary); line-height: 1;">0.0
+                        ★</span>
+                    <span class="reviews__stat-label"
+                        style="font-size: 1.1rem; color: var(--color-text-muted); margin-top: 8px; display: block; font-weight: 600;">Rating
+                        Medio</span>
+                </div>
+                <div class="reviews__stat" style="text-align: center;">
+                    <span class="reviews__stat-number" data-target="10" data-suffix="+"
+                        style="display: block; font-family: var(--font-heading); font-size: 3.5rem; font-weight: 800; color: var(--color-primary); line-height: 1;">0</span>
+                    <span class="reviews__stat-label"
+                        style="font-size: 1.1rem; color: var(--color-text-muted); margin-top: 8px; display: block; font-weight: 600;">Anni
+                        di Esperienza</span>
+                </div>
             </div>
 
             <!-- Auto-scrolling reviews carousel -->
