@@ -659,6 +659,40 @@ ul {
     box-shadow: var(--shadow-glow);
 }
 
+.explore__card {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0D2847 50%, var(--color-bg-dark) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    transition: var(--transition);
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+}
+
+.explore__card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 30px rgba(14, 77, 100, 0.4);
+}
+
+.explore__card-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0;
+}
+
 .method__number {
     font-family: var(--font-heading);
     font-size: 3rem;
