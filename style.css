@@ -630,34 +630,109 @@ ul {
     margin-top: 12px;
 }
 
+
+
+
+
 /* ═══════════════════════════════════════════════════════════════════
-   METHOD SECTION
+   TIMELINE SECTION
    ═══════════════════════════════════════════════════════════════════ */
-.method__grid {
+.timeline {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    margin-bottom: 48px;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto 48px;
+    padding: 0 15px;
 }
 
-.method__card {
-    background: var(--color-bg-dark-card);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 40px 32px;
-    border-radius: var(--radius-xl);
-    text-align: center;
-    transition: var(--transition);
-    flex: 1;
-    max-width: 340px;
+.timeline__item {
+    display: flex;
+    gap: 32px;
     position: relative;
 }
 
-.method__card:hover {
-    transform: translateY(-8px);
-    border-color: var(--color-accent);
-    box-shadow: var(--shadow-glow);
+.timeline__item::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    bottom: -40px;
+    left: 31px;
+    width: 2px;
+    background: rgba(74, 159, 217, 0.2);
+    z-index: 0;
 }
+
+.timeline__item:last-child::before {
+    display: none;
+}
+
+.timeline__marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.timeline__number {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+}
+
+.timeline__icon {
+    width: 64px;
+    height: 64px;
+    background: var(--color-bg-dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.timeline__icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.timeline__item:hover .timeline__icon {
+    background: var(--color-accent);
+    color: var(--color-bg-dark);
+    transform: scale(1.1);
+}
+
+.timeline__content {
+    flex: 1;
+    padding-top: 10px;
+    text-align: left;
+    background: transparent;
+    border: none;
+}
+
+.timeline__title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.timeline__text {
+    font-size: 0.95rem;
+    color: var(--color-text-light-muted);
+    line-height: 1.7;
+}
+
+.timeline__text strong {
+    color: white;
+}
+
 
 .explore__card {
     background: linear-gradient(135deg, var(--color-primary) 0%, #0D2847 50%, var(--color-bg-dark) 100%);
@@ -691,59 +766,6 @@ ul {
     font-weight: 700;
     color: white;
     margin-bottom: 0;
-}
-
-.method__number {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 800;
-    color: rgba(74, 159, 217, 0.15);
-    position: absolute;
-    top: 16px;
-    right: 24px;
-}
-
-.method__icon-wrap {
-    width: 64px;
-    height: 64px;
-    background: rgba(74, 159, 217, 0.12);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 24px;
-    color: var(--color-accent);
-}
-
-.method__icon-wrap svg {
-    width: 32px;
-    height: 32px;
-}
-
-.method__card-title {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 12px;
-}
-
-.method__card-text {
-    font-size: 0.9rem;
-    color: var(--color-text-light-muted);
-    line-height: 1.7;
-}
-
-.method__connector {
-    width: 60px;
-    flex-shrink: 0;
-    color: var(--color-accent);
-    opacity: 0.4;
-}
-
-.method__connector svg {
-    width: 60px;
-    height: 24px;
 }
 
 .method__cta {
@@ -1355,20 +1377,11 @@ ul {
         margin-right: auto;
     }
 
-    .method__grid {
-        flex-direction: column;
-        gap: 24px;
-    }
+    
 
-    .method__connector {
-        transform: rotate(90deg);
-        width: 40px;
-    }
+    
 
-    .method__card {
-        max-width: 500px;
-        width: 100%;
-    }
+    
 
     .reviews__grid {
         grid-template-columns: repeat(2, 1fr);
