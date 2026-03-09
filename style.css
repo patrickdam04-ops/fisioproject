@@ -358,7 +358,7 @@ ul {
     overflow: hidden;
 }
 
-.hero__bg-shapes {
+.bg-shapes {
     position: absolute;
     inset: 0;
     overflow: hidden;
@@ -510,7 +510,9 @@ ul {
    SECTIONS (General)
    ═══════════════════════════════════════════════════════════════════ */
 .section {
+    position: relative;
     padding: var(--section-padding);
+    overflow: hidden;
 }
 
 .section--light {
