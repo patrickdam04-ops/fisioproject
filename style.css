@@ -326,8 +326,8 @@ ul {
    ═══════════════════════════════════════════════════════════════════ */
 .video-banner {
     width: 100%;
-    margin-top: 80px;
-    /* Offset for fixed navbar */
+    margin-top: 0;
+    /* Removed offset to pull the video up under the navbar as requested */
     position: relative;
     background: var(--color-bg-dark);
 }
