@@ -810,125 +810,6 @@ ul {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   TEAM SECTION
-   ═══════════════════════════════════════════════════════════════════ */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.team-card {
-    background: white;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    border: 1px solid var(--color-border);
-    display: flex;
-    flex-direction: column;
-}
-
-.team-card:hover {
-    box-shadow: var(--shadow-xl);
-    transform: translateY(-8px);
-}
-
-.team-card__image-wrapper {
-    position: relative;
-    height: 380px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e2e8f0 100%);
-    border-bottom: 2px solid var(--color-accent);
-}
-
-.team-card__bg {
-    position: absolute;
-    inset: 0;
-    opacity: 0.15;
-    background: radial-gradient(circle at 50% 50%, rgba(74, 159, 217, 0.4) 0%, transparent 70%);
-}
-
-.team-card__bg.placeholder-bg {
-    background: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.2) 0%, transparent 70%);
-}
-
-.team-card__img {
-    height: 95%;
-    width: auto;
-    object-fit: contain;
-    position: relative;
-    z-index: 2;
-    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.5s ease;
-    transform-origin: bottom center;
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
-}
-
-.team-card:hover .team-card__img {
-    transform: scale(1.1) translateY(-10px);
-    filter: drop-shadow(0 20px 25px rgba(0,0,0,0.2));
-}
-
-.team-card__placeholder {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 80px;
-    color: var(--color-text-muted);
-}
-
-.team-card__content {
-    padding: 32px 24px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.team-card__name {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    color: var(--color-text);
-    margin-bottom: 6px;
-}
-
-.team-card__role {
-    font-weight: 700;
-    color: var(--color-accent);
-    font-size: 0.95rem;
-    margin-bottom: 24px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.team-card__skills p {
-    color: var(--color-text-light-muted);
-    font-size: 0.98rem;
-    line-height: 1.6;
-}
-
-.btn--outline-dark {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 24px;
-    border-radius: var(--radius-pill);
-    font-weight: 600;
-    font-size: 0.95rem;
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
-    background: transparent;
-    transition: var(--transition);
-    text-decoration: none;
-}
-
-.btn--outline-dark:hover {
-    background: var(--color-primary);
-    color: white;
-}
-
-/* ═══════════════════════════════════════════════════════════════════
    REVIEWS / SOCIAL PROOF SECTION
    ═══════════════════════════════════════════════════════════════════ */
 .reviews__highlight {
@@ -1282,6 +1163,118 @@ ul {
 /* ═══════════════════════════════════════════════════════════════════
    ABOUT SECTION
    ═══════════════════════════════════════════════════════════════════ */
+
+.team-member-container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.team-member-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+    opacity: 0.15;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    filter: blur(40px);
+    animation: pulse-glow 4s ease-in-out infinite alternate;
+}
+
+.team-member-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-member-img:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 50px rgba(74, 159, 217, 0.25);
+}
+
+@keyframes pulse-glow {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.15; }
+    100% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.3; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   TEAM PAGE GRID
+   ═══════════════════════════════════════════════════════════════════ */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.team-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--color-border);
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(74, 159, 217, 0.3);
+}
+
+.team-card__img-container {
+    background: linear-gradient(135deg, rgba(74, 159, 217, 0.1) 0%, rgba(13, 40, 71, 0.05) 100%);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* If the image has transparent background, it will look like he's standing in the circle */
+
+.team-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.team-card__role {
+    font-size: 1rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.team-card__desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 .about__content {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
