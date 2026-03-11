@@ -1597,6 +1597,16 @@ ul {
     transform: translateY(0);
 }
 
+.animate-on-scroll.animate-pop-in {
+    transform: scale(0.8) translateY(60px);
+    transition: opacity 1.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-on-scroll.animate-pop-in.visible {
+    transform: scale(1) translateY(0);
+}
+
 /* Staggered animation delays for grid children */
 .problem__card:nth-child(1) {
     transition-delay: 0s;
