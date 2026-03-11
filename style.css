@@ -810,6 +810,125 @@ ul {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
+   TEAM SECTION
+   ═══════════════════════════════════════════════════════════════════ */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.team-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-8px);
+}
+
+.team-card__image-wrapper {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e2e8f0 100%);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.team-card__bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.15;
+    background: radial-gradient(circle at 50% 50%, rgba(74, 159, 217, 0.4) 0%, transparent 70%);
+}
+
+.team-card__bg.placeholder-bg {
+    background: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.2) 0%, transparent 70%);
+}
+
+.team-card__img {
+    height: 95%;
+    width: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.5s ease;
+    transform-origin: bottom center;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+.team-card:hover .team-card__img {
+    transform: scale(1.1) translateY(-10px);
+    filter: drop-shadow(0 20px 25px rgba(0,0,0,0.2));
+}
+
+.team-card__placeholder {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 80px;
+    color: var(--color-text-muted);
+}
+
+.team-card__content {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.team-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--color-text);
+    margin-bottom: 6px;
+}
+
+.team-card__role {
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team-card__skills p {
+    color: var(--color-text-light-muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.btn--outline-dark {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn--outline-dark:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
    REVIEWS / SOCIAL PROOF SECTION
    ═══════════════════════════════════════════════════════════════════ */
 .reviews__highlight {
