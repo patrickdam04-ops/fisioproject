@@ -1286,6 +1286,31 @@ ul {
     line-height: 1.5;
 }
 
+.team-card__formation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.team-card__formation li {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding-left: 20px;
+    position: relative;
+}
+
+.team-card__formation li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
 .about__content {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
