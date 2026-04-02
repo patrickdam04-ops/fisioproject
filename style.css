@@ -697,7 +697,7 @@ ul {
     font-size: 8rem;
     font-weight: 900;
     font-family: var(--font-heading);
-    color: rgba(74, 159, 217, 0.04);
+    color: rgba(74, 159, 217, 0.15);
     line-height: 1;
     user-select: none;
     pointer-events: none;
@@ -705,7 +705,7 @@ ul {
 }
 
 .steps__item:hover .steps__number-bg {
-    color: rgba(74, 159, 217, 0.08);
+    color: rgba(74, 159, 217, 0.25);
     transform: scale(1.05);
 }
 
