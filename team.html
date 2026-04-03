@@ -18,19 +18,24 @@
 <body>
     <!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
     <nav class="navbar" id="navbar">
-        <div class="container navbar__container">
+        <div class="container navbar__inner">
             <a href="index.html" class="navbar__logo">
-                <img src="images/logo-fisio-Photoroom.png" alt="Fisioproject Logo" class="navbar__logo-img">
+                <img src="images/logo-fisio-Photoroom.png" alt="Fisioproject — Studio Fisioterapico"
+                    class="navbar__logo-img">
             </a>
-            <div class="navbar__menu" id="navMenu">
-                <a href="index.html" class="navbar__link">Homepage</a>
-                <a href="trattamenti.html" class="navbar__link">Trattamenti</a>
-                <a href="struttura.html" class="navbar__link">La Struttura</a>
-                <a href="team.html" class="navbar__link">Il Team</a>
-                <a href="contatti.html" class="navbar__link">Contatti</a>
-                <a href="https://wa.me/393398492657?text=Ciao%2C%20vorrei%20prenotare%20una%20valutazione."
-                    class="btn btn--primary navbar__cta" target="_blank" rel="noopener">Prenota Ora</a>
-            </div>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index.html" class="navbar__link">Homepage</a></li>
+                <li><a href="trattamenti.html" class="navbar__link">Trattamenti</a></li>
+                <li><a href="struttura.html" class="navbar__link">La Struttura</a></li>
+                <li><a href="team.html" class="navbar__link">Il Team</a></li>
+                <li><a href="contatti.html" class="navbar__link">Contatti</a></li>
+                <li>
+                    <a href="https://wa.me/393398492657?text=Ciao%2C%20vorrei%20prenotare%20una%20valutazione."
+                        class="btn btn--primary navbar__cta" target="_blank" rel="noopener">
+                        Prenota Ora
+                    </a>
+                </li>
+            </ul>
             <button class="navbar__hamburger" id="hamburger" aria-label="Apri menu">
                 <span></span><span></span><span></span>
             </button>
@@ -38,7 +43,7 @@
     </nav>
 
     <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
-    <section class="section section--gradient" style="padding-top: 180px; min-height: 40vh;">
+    <section class="section" style="padding-top: 180px; min-height: 50vh; background: linear-gradient(rgba(13, 40, 71, 0.7), rgba(13, 40, 71, 0.7)), url('images/team.jpeg') center/cover no-repeat; position: relative; overflow: hidden;">
         <div class="bg-shapes">
             <div class="shape shape--1"></div>
             <div class="shape shape--2"></div>
@@ -65,10 +70,6 @@
                 </p>
             </div>
 
-            <div class="animate-on-scroll" style="margin-bottom: 50px;">
-                <img src="images/team.jpeg" alt="Il Team Fisioproject" style="width: 100%; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
-            </div>
-            
             <div class="team-grid">
                 
                 <!-- VALENTINO ALESSI CARD -->
